@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite thread-count="2" guice-stage="DEVELOPMENT" name="Failed suite [Suite]" parallel="tests">
+  <listeners>
+    <listener class-name="com.sohambko.qa.ExtentReportListener.ExtentReporterNG"/>
+  </listeners>
+  <test thread-count="2" name="Chrome Test 1(failed)" parallel="tests">
+    <parameter name="browser" value="chrome"/>
+    <classes>
+      <class name="com.sohambko.qa.testcases.LoginPageTest">
+        <methods>
+          <include name="crmLogoImageTest"/>
+          <include name="loginTest"/>
+          <include name="setUp"/>
+          <include name="loginPageTitleTest"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.sohambko.qa.testcases.LoginPageTest -->
+    </classes>
+  </test> <!-- Chrome Test 1(failed) -->
+</suite> <!-- Failed suite [Suite] -->

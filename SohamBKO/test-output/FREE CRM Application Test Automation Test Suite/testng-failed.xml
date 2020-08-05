@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="2" guice-stage="DEVELOPMENT" name="Failed suite [FREE CRM Application Test Automation Test Suite]" parallel="tests">
+  <listeners>
+    <listener class-name="com.sohambko.qa.ExtentReportListener.ExtentReporterNG"/>
+  </listeners>
+  <test thread-count="2" name="HubSpot Feature Testing - Login page - firefox(failed)" parallel="tests">
+    <parameter name="browser" value="chrome"/>
+    <classes>
+      <class name="com.sohambko.qa.testcases.LoginPageTest">
+        <methods>
+          <include name="loginTest"/>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.sohambko.qa.testcases.LoginPageTest -->
+    </classes>
+  </test> <!-- HubSpot Feature Testing - Login page - firefox(failed) -->
+  <test thread-count="2" name="HubSpot Feature Testing - Login page - chrome(failed)" parallel="tests">
+    <parameter name="browser" value="chrome"/>
+    <classes>
+      <class name="com.sohambko.qa.testcases.LoginPageTest">
+        <methods>
+          <include name="loginTest"/>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.sohambko.qa.testcases.LoginPageTest -->
+    </classes>
+  </test> <!-- HubSpot Feature Testing - Login page - chrome(failed) -->
+</suite> <!-- Failed suite [FREE CRM Application Test Automation Test Suite] -->

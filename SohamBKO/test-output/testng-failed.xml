@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="2" guice-stage="DEVELOPMENT" name="Failed suite [Free CRM Test automtion regression suite]" parallel="tests">
+  <listeners>
+    <listener class-name="com.sohambko.qa.ExtentReportListener.ExtentReportListener"/>
+  </listeners>
+  <test thread-count="2" name="Contacts Page Tests(failed)" parallel="tests">
+    <parameter name="browser" value="chrome"/>
+    <classes>
+      <class name="com.sohambko.qa.testcases.ContactsPageTest">
+        <methods>
+          <include name="verifyselectMultipleContactsTest"/>
+          <include name="verifyselectSingleContactsTest"/>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.sohambko.qa.testcases.ContactsPageTest -->
+    </classes>
+  </test> <!-- Contacts Page Tests(failed) -->
+  <test thread-count="2" name="Contacts Page Tests 1(failed)" parallel="tests">
+    <parameter name="browser" value="chrome"/>
+    <classes>
+      <class name="com.sohambko.qa.testcases.ContactsPageTest">
+        <methods>
+          <include name="verifyselectSingleContactsTest"/>
+          <include name="setUp"/>
+          <include name="verifyContactsPageLabel"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.sohambko.qa.testcases.ContactsPageTest -->
+    </classes>
+  </test> <!-- Contacts Page Tests 1(failed) -->
+  <test thread-count="2" name="Contacts Page Tests 2(failed)" parallel="tests">
+    <parameter name="browser" value="chrome"/>
+    <classes>
+      <class name="com.sohambko.qa.testcases.ContactsPageTest">
+        <methods>
+          <include name="setUp"/>
+          <include name="verifyContactsPageLabel"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.sohambko.qa.testcases.ContactsPageTest -->
+    </classes>
+  </test> <!-- Contacts Page Tests 2(failed) -->
+</suite> <!-- Failed suite [Free CRM Test automtion regression suite] -->

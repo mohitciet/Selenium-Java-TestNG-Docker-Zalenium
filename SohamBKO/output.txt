@@ -1,0 +1,6 @@
+Docker binary already present, will use that one.
+Docker version 18.09.0, build 4d60db4
+-- LOG 15:40:36:261097040 Ensuring docker works...
+-- LOG 15:40:36:392441328 Ensuring docker-selenium is available...
+Seems that docker-selenium's image has not been pulled yet
+Please run 'docker pull elgalu/selenium', or use your own compatible image via --seleniumImageName

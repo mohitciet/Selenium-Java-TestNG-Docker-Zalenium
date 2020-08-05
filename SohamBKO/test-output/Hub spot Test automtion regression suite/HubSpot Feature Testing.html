@@ -1,0 +1,817 @@
+<html>
+<head>
+<title>TestNG:  HubSpot Feature Testing</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>HubSpot Feature Testing</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>0/0/3</td>
+</tr><tr>
+<td>Started on:</td><td>Sun Aug 02 23:08:09 IST 2020</td>
+</tr>
+<tr><td>Total time:</td><td>11 seconds (11412 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED CONFIGURATIONS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.sohambko.qa.testcases.LoginPageTest.setUp()'><b>setUp</b><br>Test class: com.sohambko.qa.testcases.LoginPageTest</td>
+<td><div><pre>org.openqa.selenium.SessionNotCreatedException: session not created
+from disconnected: received Inspector.detached event
+  (Session info: chrome=84.0.4147.105)
+Build info: version: &apos;3.14.0&apos;, revision: &apos;aacccce0&apos;, time: &apos;2018-08-02T20:19:58.91Z&apos;
+System info: host: &apos;DEL1-LHP-N01966&apos;, ip: &apos;192.168.1.4&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_241&apos;
+Driver info: driver.version: ChromeDriver
+remote stacktrace: Backtrace:
+	Ordinal0 [0x016387E3+2852835]
+	Ordinal0 [0x01525BB1+1727409]
+	Ordinal0 [0x013FE4B9+517305]
+	Ordinal0 [0x013F6959+485721]
+	Ordinal0 [0x013F656C+484716]
+	Ordinal0 [0x013F5E98+482968]
+	Ordinal0 [0x013F52D1+479953]
+	Ordinal0 [0x013F5515+480533]
+	Ordinal0 [0x013F4F45+479045]
+	Ordinal0 [0x013FA02F+499759]
+	Ordinal0 [0x013F4F02+478978]
+	Ordinal0 [0x013F5B19+482073]
+	Ordinal0 [0x013F52D1+479953]
+	Ordinal0 [0x013F5515+480533]
+	Ordinal0 [0x013F4F45+479045]
+	Ordinal0 [0x013F9587+497031]
+	Ordinal0 [0x013F4F02+478978]
+	Ordinal0 [0x013F5B19+482073]
+	Ordinal0 [0x013F52D1+479953]
+	Ordinal0 [0x013F5515+480533]
+	Ordinal0 [0x013F4F45+479045]
+	Ordinal0 [0x013F16BC+464572]
+	Ordinal0 [0x013F4F02+478978]
+	Ordinal0 [0x013F4E57+478807]
+	Ordinal0 [0x013FF300+520960]
+	Ordinal0 [0x013AE489+189577]
+	Ordinal0 [0x013AD7FD+186365]
+	Ordinal0 [0x013AB70B+177931]
+	Ordinal0 [0x01392584+75140]
+	Ordinal0 [0x01393650+79440]
+	Ordinal0 [0x013935E9+79337]
+	Ordinal0 [0x0153AD5C+1813852]
+	GetHandleVerifier [0x0175C616+1075574]
+	GetHandleVerifier [0x0175C367+1074887]
+	GetHandleVerifier [0x01767497+1120247]
+	GetHandleVerifier [0x0175CC16+1077110]
+	Ordinal0 [0x01533206+1782278]
+	Ordinal0 [0x0153C3BB+1819579]
+	Ordinal0 [0x0153C523+1819939]
+	Ordinal0 [0x01552B45+1911621]
+	BaseThreadInitThunk [0x74788494+36]
+	RtlAreBitsSet [0x778E41C8+136]
+	RtlAreBitsSet [0x778E4198+88]
+
+	at org.openqa.selenium.remote.W3CHandshakeResponse.lambda$new$0(W3CHandshakeResponse.java:57)
+	at org.openqa.selenium.remote.W3CHandshakeResponse.lambda$getResponseFunction$2(W3CHandshakeResponse.java:104)
+	at org.openqa.selenium.remote.ProtocolHandshake.lambda$createSession$0(ProtocolHandshake.java:122)
+	at java.util.stream.ReferencePipeline$3$1.accept(Unknown Source)
+	at java.util.Spliterators$ArraySpliterator.tryAdvance(Unknown Source)
+	at java.util.stream.ReferencePipeline.forEachWithCancel(Unknown Source)
+	at java.util.stream.AbstractPipeline.copyIntoWithCancel(Unknown Source)
+	at java.util.stream.AbstractPipeline.copyInto(Unknown Source)
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(Unknown Source)
+	at java.util.stream.FindOps$FindOp.evaluateSequential(Unknown Source)
+	at java.util.stream.AbstractPipeline.evaluate(Unknown Source)
+	at java.util.stream.ReferencePipeline.findFirst(Unknown Source)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:125)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:73)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:136)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:548)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:212)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:130)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:181)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:168)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:123)
+	at com.sohambko.qa.base.TestBase.initialization(TestBase.java:50)
+	at com.sohambko.qa.testcases.LoginPageTest.setUp(LoginPageTest.java:22)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+... Removed 16 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1555748781", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1555748781'><pre>org.openqa.selenium.SessionNotCreatedException: session not created
+from disconnected: received Inspector.detached event
+  (Session info: chrome=84.0.4147.105)
+Build info: version: &apos;3.14.0&apos;, revision: &apos;aacccce0&apos;, time: &apos;2018-08-02T20:19:58.91Z&apos;
+System info: host: &apos;DEL1-LHP-N01966&apos;, ip: &apos;192.168.1.4&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_241&apos;
+Driver info: driver.version: ChromeDriver
+remote stacktrace: Backtrace:
+	Ordinal0 [0x016387E3+2852835]
+	Ordinal0 [0x01525BB1+1727409]
+	Ordinal0 [0x013FE4B9+517305]
+	Ordinal0 [0x013F6959+485721]
+	Ordinal0 [0x013F656C+484716]
+	Ordinal0 [0x013F5E98+482968]
+	Ordinal0 [0x013F52D1+479953]
+	Ordinal0 [0x013F5515+480533]
+	Ordinal0 [0x013F4F45+479045]
+	Ordinal0 [0x013FA02F+499759]
+	Ordinal0 [0x013F4F02+478978]
+	Ordinal0 [0x013F5B19+482073]
+	Ordinal0 [0x013F52D1+479953]
+	Ordinal0 [0x013F5515+480533]
+	Ordinal0 [0x013F4F45+479045]
+	Ordinal0 [0x013F9587+497031]
+	Ordinal0 [0x013F4F02+478978]
+	Ordinal0 [0x013F5B19+482073]
+	Ordinal0 [0x013F52D1+479953]
+	Ordinal0 [0x013F5515+480533]
+	Ordinal0 [0x013F4F45+479045]
+	Ordinal0 [0x013F16BC+464572]
+	Ordinal0 [0x013F4F02+478978]
+	Ordinal0 [0x013F4E57+478807]
+	Ordinal0 [0x013FF300+520960]
+	Ordinal0 [0x013AE489+189577]
+	Ordinal0 [0x013AD7FD+186365]
+	Ordinal0 [0x013AB70B+177931]
+	Ordinal0 [0x01392584+75140]
+	Ordinal0 [0x01393650+79440]
+	Ordinal0 [0x013935E9+79337]
+	Ordinal0 [0x0153AD5C+1813852]
+	GetHandleVerifier [0x0175C616+1075574]
+	GetHandleVerifier [0x0175C367+1074887]
+	GetHandleVerifier [0x01767497+1120247]
+	GetHandleVerifier [0x0175CC16+1077110]
+	Ordinal0 [0x01533206+1782278]
+	Ordinal0 [0x0153C3BB+1819579]
+	Ordinal0 [0x0153C523+1819939]
+	Ordinal0 [0x01552B45+1911621]
+	BaseThreadInitThunk [0x74788494+36]
+	RtlAreBitsSet [0x778E41C8+136]
+	RtlAreBitsSet [0x778E4198+88]
+
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.W3CHandshakeResponse.lambda$new$0(W3CHandshakeResponse.java:57)
+	at org.openqa.selenium.remote.W3CHandshakeResponse.lambda$getResponseFunction$2(W3CHandshakeResponse.java:104)
+	at org.openqa.selenium.remote.ProtocolHandshake.lambda$createSession$0(ProtocolHandshake.java:122)
+	at java.util.stream.ReferencePipeline$3$1.accept(Unknown Source)
+	at java.util.Spliterators$ArraySpliterator.tryAdvance(Unknown Source)
+	at java.util.stream.ReferencePipeline.forEachWithCancel(Unknown Source)
+	at java.util.stream.AbstractPipeline.copyIntoWithCancel(Unknown Source)
+	at java.util.stream.AbstractPipeline.copyInto(Unknown Source)
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(Unknown Source)
+	at java.util.stream.FindOps$FindOp.evaluateSequential(Unknown Source)
+	at java.util.stream.AbstractPipeline.evaluate(Unknown Source)
+	at java.util.stream.ReferencePipeline.findFirst(Unknown Source)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:125)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:73)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:136)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:548)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:212)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:130)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:181)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:168)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:123)
+	at com.sohambko.qa.base.TestBase.initialization(TestBase.java:50)
+	at com.sohambko.qa.testcases.LoginPageTest.setUp(LoginPageTest.java:22)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:523)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:224)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:599)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:869)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1193)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:126)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+</pre></div></td>
+<td>11</td>
+<td>com.sohambko.qa.testcases.LoginPageTest@5a8e6209</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-skipped'>
+<tr><td colspan='4' align='center'><b>SKIPPED CONFIGURATIONS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.sohambko.qa.testcases.LoginPageTest.setUp()'><b>setUp</b><br>Test class: com.sohambko.qa.testcases.LoginPageTest</td>
+<td></td>
+<td>0</td>
+<td>com.sohambko.qa.testcases.LoginPageTest@5a8e6209</td></tr>
+<tr>
+<td title='com.sohambko.qa.testcases.LoginPageTest.setUp()'><b>setUp</b><br>Test class: com.sohambko.qa.testcases.LoginPageTest</td>
+<td></td>
+<td>0</td>
+<td>com.sohambko.qa.testcases.LoginPageTest@5a8e6209</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-skipped'>
+<tr><td colspan='4' align='center'><b>SKIPPED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.sohambko.qa.testcases.LoginPageTest.crmLogoImageTest()'><b>crmLogoImageTest</b><br>Test class: com.sohambko.qa.testcases.LoginPageTest</td>
+<td><div><pre>org.openqa.selenium.SessionNotCreatedException: session not created
+from disconnected: received Inspector.detached event
+  (Session info: chrome=84.0.4147.105)
+Build info: version: &apos;3.14.0&apos;, revision: &apos;aacccce0&apos;, time: &apos;2018-08-02T20:19:58.91Z&apos;
+System info: host: &apos;DEL1-LHP-N01966&apos;, ip: &apos;192.168.1.4&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_241&apos;
+Driver info: driver.version: ChromeDriver
+remote stacktrace: Backtrace:
+	Ordinal0 [0x016387E3+2852835]
+	Ordinal0 [0x01525BB1+1727409]
+	Ordinal0 [0x013FE4B9+517305]
+	Ordinal0 [0x013F6959+485721]
+	Ordinal0 [0x013F656C+484716]
+	Ordinal0 [0x013F5E98+482968]
+	Ordinal0 [0x013F52D1+479953]
+	Ordinal0 [0x013F5515+480533]
+	Ordinal0 [0x013F4F45+479045]
+	Ordinal0 [0x013FA02F+499759]
+	Ordinal0 [0x013F4F02+478978]
+	Ordinal0 [0x013F5B19+482073]
+	Ordinal0 [0x013F52D1+479953]
+	Ordinal0 [0x013F5515+480533]
+	Ordinal0 [0x013F4F45+479045]
+	Ordinal0 [0x013F9587+497031]
+	Ordinal0 [0x013F4F02+478978]
+	Ordinal0 [0x013F5B19+482073]
+	Ordinal0 [0x013F52D1+479953]
+	Ordinal0 [0x013F5515+480533]
+	Ordinal0 [0x013F4F45+479045]
+	Ordinal0 [0x013F16BC+464572]
+	Ordinal0 [0x013F4F02+478978]
+	Ordinal0 [0x013F4E57+478807]
+	Ordinal0 [0x013FF300+520960]
+	Ordinal0 [0x013AE489+189577]
+	Ordinal0 [0x013AD7FD+186365]
+	Ordinal0 [0x013AB70B+177931]
+	Ordinal0 [0x01392584+75140]
+	Ordinal0 [0x01393650+79440]
+	Ordinal0 [0x013935E9+79337]
+	Ordinal0 [0x0153AD5C+1813852]
+	GetHandleVerifier [0x0175C616+1075574]
+	GetHandleVerifier [0x0175C367+1074887]
+	GetHandleVerifier [0x01767497+1120247]
+	GetHandleVerifier [0x0175CC16+1077110]
+	Ordinal0 [0x01533206+1782278]
+	Ordinal0 [0x0153C3BB+1819579]
+	Ordinal0 [0x0153C523+1819939]
+	Ordinal0 [0x01552B45+1911621]
+	BaseThreadInitThunk [0x74788494+36]
+	RtlAreBitsSet [0x778E41C8+136]
+	RtlAreBitsSet [0x778E4198+88]
+
+	at org.openqa.selenium.remote.W3CHandshakeResponse.lambda$new$0(W3CHandshakeResponse.java:57)
+	at org.openqa.selenium.remote.W3CHandshakeResponse.lambda$getResponseFunction$2(W3CHandshakeResponse.java:104)
+	at org.openqa.selenium.remote.ProtocolHandshake.lambda$createSession$0(ProtocolHandshake.java:122)
+	at java.util.stream.ReferencePipeline$3$1.accept(Unknown Source)
+	at java.util.Spliterators$ArraySpliterator.tryAdvance(Unknown Source)
+	at java.util.stream.ReferencePipeline.forEachWithCancel(Unknown Source)
+	at java.util.stream.AbstractPipeline.copyIntoWithCancel(Unknown Source)
+	at java.util.stream.AbstractPipeline.copyInto(Unknown Source)
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(Unknown Source)
+	at java.util.stream.FindOps$FindOp.evaluateSequential(Unknown Source)
+	at java.util.stream.AbstractPipeline.evaluate(Unknown Source)
+	at java.util.stream.ReferencePipeline.findFirst(Unknown Source)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:125)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:73)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:136)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:548)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:212)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:130)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:181)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:168)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:123)
+	at com.sohambko.qa.base.TestBase.initialization(TestBase.java:50)
+	at com.sohambko.qa.testcases.LoginPageTest.setUp(LoginPageTest.java:22)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+... Removed 16 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace260417354", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace260417354'><pre>org.openqa.selenium.SessionNotCreatedException: session not created
+from disconnected: received Inspector.detached event
+  (Session info: chrome=84.0.4147.105)
+Build info: version: &apos;3.14.0&apos;, revision: &apos;aacccce0&apos;, time: &apos;2018-08-02T20:19:58.91Z&apos;
+System info: host: &apos;DEL1-LHP-N01966&apos;, ip: &apos;192.168.1.4&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_241&apos;
+Driver info: driver.version: ChromeDriver
+remote stacktrace: Backtrace:
+	Ordinal0 [0x016387E3+2852835]
+	Ordinal0 [0x01525BB1+1727409]
+	Ordinal0 [0x013FE4B9+517305]
+	Ordinal0 [0x013F6959+485721]
+	Ordinal0 [0x013F656C+484716]
+	Ordinal0 [0x013F5E98+482968]
+	Ordinal0 [0x013F52D1+479953]
+	Ordinal0 [0x013F5515+480533]
+	Ordinal0 [0x013F4F45+479045]
+	Ordinal0 [0x013FA02F+499759]
+	Ordinal0 [0x013F4F02+478978]
+	Ordinal0 [0x013F5B19+482073]
+	Ordinal0 [0x013F52D1+479953]
+	Ordinal0 [0x013F5515+480533]
+	Ordinal0 [0x013F4F45+479045]
+	Ordinal0 [0x013F9587+497031]
+	Ordinal0 [0x013F4F02+478978]
+	Ordinal0 [0x013F5B19+482073]
+	Ordinal0 [0x013F52D1+479953]
+	Ordinal0 [0x013F5515+480533]
+	Ordinal0 [0x013F4F45+479045]
+	Ordinal0 [0x013F16BC+464572]
+	Ordinal0 [0x013F4F02+478978]
+	Ordinal0 [0x013F4E57+478807]
+	Ordinal0 [0x013FF300+520960]
+	Ordinal0 [0x013AE489+189577]
+	Ordinal0 [0x013AD7FD+186365]
+	Ordinal0 [0x013AB70B+177931]
+	Ordinal0 [0x01392584+75140]
+	Ordinal0 [0x01393650+79440]
+	Ordinal0 [0x013935E9+79337]
+	Ordinal0 [0x0153AD5C+1813852]
+	GetHandleVerifier [0x0175C616+1075574]
+	GetHandleVerifier [0x0175C367+1074887]
+	GetHandleVerifier [0x01767497+1120247]
+	GetHandleVerifier [0x0175CC16+1077110]
+	Ordinal0 [0x01533206+1782278]
+	Ordinal0 [0x0153C3BB+1819579]
+	Ordinal0 [0x0153C523+1819939]
+	Ordinal0 [0x01552B45+1911621]
+	BaseThreadInitThunk [0x74788494+36]
+	RtlAreBitsSet [0x778E41C8+136]
+	RtlAreBitsSet [0x778E4198+88]
+
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.W3CHandshakeResponse.lambda$new$0(W3CHandshakeResponse.java:57)
+	at org.openqa.selenium.remote.W3CHandshakeResponse.lambda$getResponseFunction$2(W3CHandshakeResponse.java:104)
+	at org.openqa.selenium.remote.ProtocolHandshake.lambda$createSession$0(ProtocolHandshake.java:122)
+	at java.util.stream.ReferencePipeline$3$1.accept(Unknown Source)
+	at java.util.Spliterators$ArraySpliterator.tryAdvance(Unknown Source)
+	at java.util.stream.ReferencePipeline.forEachWithCancel(Unknown Source)
+	at java.util.stream.AbstractPipeline.copyIntoWithCancel(Unknown Source)
+	at java.util.stream.AbstractPipeline.copyInto(Unknown Source)
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(Unknown Source)
+	at java.util.stream.FindOps$FindOp.evaluateSequential(Unknown Source)
+	at java.util.stream.AbstractPipeline.evaluate(Unknown Source)
+	at java.util.stream.ReferencePipeline.findFirst(Unknown Source)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:125)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:73)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:136)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:548)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:212)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:130)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:181)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:168)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:123)
+	at com.sohambko.qa.base.TestBase.initialization(TestBase.java:50)
+	at com.sohambko.qa.testcases.LoginPageTest.setUp(LoginPageTest.java:22)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:523)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:224)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:599)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:869)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1193)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:126)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+</pre></div></td>
+<td>0</td>
+<td>com.sohambko.qa.testcases.LoginPageTest@5a8e6209</td></tr>
+<tr>
+<td title='com.sohambko.qa.testcases.LoginPageTest.loginPageTitleTest()'><b>loginPageTitleTest</b><br>Test class: com.sohambko.qa.testcases.LoginPageTest</td>
+<td><div><pre>org.openqa.selenium.SessionNotCreatedException: session not created
+from disconnected: received Inspector.detached event
+  (Session info: chrome=84.0.4147.105)
+Build info: version: &apos;3.14.0&apos;, revision: &apos;aacccce0&apos;, time: &apos;2018-08-02T20:19:58.91Z&apos;
+System info: host: &apos;DEL1-LHP-N01966&apos;, ip: &apos;192.168.1.4&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_241&apos;
+Driver info: driver.version: ChromeDriver
+remote stacktrace: Backtrace:
+	Ordinal0 [0x016387E3+2852835]
+	Ordinal0 [0x01525BB1+1727409]
+	Ordinal0 [0x013FE4B9+517305]
+	Ordinal0 [0x013F6959+485721]
+	Ordinal0 [0x013F656C+484716]
+	Ordinal0 [0x013F5E98+482968]
+	Ordinal0 [0x013F52D1+479953]
+	Ordinal0 [0x013F5515+480533]
+	Ordinal0 [0x013F4F45+479045]
+	Ordinal0 [0x013FA02F+499759]
+	Ordinal0 [0x013F4F02+478978]
+	Ordinal0 [0x013F5B19+482073]
+	Ordinal0 [0x013F52D1+479953]
+	Ordinal0 [0x013F5515+480533]
+	Ordinal0 [0x013F4F45+479045]
+	Ordinal0 [0x013F9587+497031]
+	Ordinal0 [0x013F4F02+478978]
+	Ordinal0 [0x013F5B19+482073]
+	Ordinal0 [0x013F52D1+479953]
+	Ordinal0 [0x013F5515+480533]
+	Ordinal0 [0x013F4F45+479045]
+	Ordinal0 [0x013F16BC+464572]
+	Ordinal0 [0x013F4F02+478978]
+	Ordinal0 [0x013F4E57+478807]
+	Ordinal0 [0x013FF300+520960]
+	Ordinal0 [0x013AE489+189577]
+	Ordinal0 [0x013AD7FD+186365]
+	Ordinal0 [0x013AB70B+177931]
+	Ordinal0 [0x01392584+75140]
+	Ordinal0 [0x01393650+79440]
+	Ordinal0 [0x013935E9+79337]
+	Ordinal0 [0x0153AD5C+1813852]
+	GetHandleVerifier [0x0175C616+1075574]
+	GetHandleVerifier [0x0175C367+1074887]
+	GetHandleVerifier [0x01767497+1120247]
+	GetHandleVerifier [0x0175CC16+1077110]
+	Ordinal0 [0x01533206+1782278]
+	Ordinal0 [0x0153C3BB+1819579]
+	Ordinal0 [0x0153C523+1819939]
+	Ordinal0 [0x01552B45+1911621]
+	BaseThreadInitThunk [0x74788494+36]
+	RtlAreBitsSet [0x778E41C8+136]
+	RtlAreBitsSet [0x778E4198+88]
+
+	at org.openqa.selenium.remote.W3CHandshakeResponse.lambda$new$0(W3CHandshakeResponse.java:57)
+	at org.openqa.selenium.remote.W3CHandshakeResponse.lambda$getResponseFunction$2(W3CHandshakeResponse.java:104)
+	at org.openqa.selenium.remote.ProtocolHandshake.lambda$createSession$0(ProtocolHandshake.java:122)
+	at java.util.stream.ReferencePipeline$3$1.accept(Unknown Source)
+	at java.util.Spliterators$ArraySpliterator.tryAdvance(Unknown Source)
+	at java.util.stream.ReferencePipeline.forEachWithCancel(Unknown Source)
+	at java.util.stream.AbstractPipeline.copyIntoWithCancel(Unknown Source)
+	at java.util.stream.AbstractPipeline.copyInto(Unknown Source)
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(Unknown Source)
+	at java.util.stream.FindOps$FindOp.evaluateSequential(Unknown Source)
+	at java.util.stream.AbstractPipeline.evaluate(Unknown Source)
+	at java.util.stream.ReferencePipeline.findFirst(Unknown Source)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:125)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:73)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:136)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:548)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:212)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:130)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:181)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:168)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:123)
+	at com.sohambko.qa.base.TestBase.initialization(TestBase.java:50)
+	at com.sohambko.qa.testcases.LoginPageTest.setUp(LoginPageTest.java:22)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+... Removed 16 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace399179323", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace399179323'><pre>org.openqa.selenium.SessionNotCreatedException: session not created
+from disconnected: received Inspector.detached event
+  (Session info: chrome=84.0.4147.105)
+Build info: version: &apos;3.14.0&apos;, revision: &apos;aacccce0&apos;, time: &apos;2018-08-02T20:19:58.91Z&apos;
+System info: host: &apos;DEL1-LHP-N01966&apos;, ip: &apos;192.168.1.4&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_241&apos;
+Driver info: driver.version: ChromeDriver
+remote stacktrace: Backtrace:
+	Ordinal0 [0x016387E3+2852835]
+	Ordinal0 [0x01525BB1+1727409]
+	Ordinal0 [0x013FE4B9+517305]
+	Ordinal0 [0x013F6959+485721]
+	Ordinal0 [0x013F656C+484716]
+	Ordinal0 [0x013F5E98+482968]
+	Ordinal0 [0x013F52D1+479953]
+	Ordinal0 [0x013F5515+480533]
+	Ordinal0 [0x013F4F45+479045]
+	Ordinal0 [0x013FA02F+499759]
+	Ordinal0 [0x013F4F02+478978]
+	Ordinal0 [0x013F5B19+482073]
+	Ordinal0 [0x013F52D1+479953]
+	Ordinal0 [0x013F5515+480533]
+	Ordinal0 [0x013F4F45+479045]
+	Ordinal0 [0x013F9587+497031]
+	Ordinal0 [0x013F4F02+478978]
+	Ordinal0 [0x013F5B19+482073]
+	Ordinal0 [0x013F52D1+479953]
+	Ordinal0 [0x013F5515+480533]
+	Ordinal0 [0x013F4F45+479045]
+	Ordinal0 [0x013F16BC+464572]
+	Ordinal0 [0x013F4F02+478978]
+	Ordinal0 [0x013F4E57+478807]
+	Ordinal0 [0x013FF300+520960]
+	Ordinal0 [0x013AE489+189577]
+	Ordinal0 [0x013AD7FD+186365]
+	Ordinal0 [0x013AB70B+177931]
+	Ordinal0 [0x01392584+75140]
+	Ordinal0 [0x01393650+79440]
+	Ordinal0 [0x013935E9+79337]
+	Ordinal0 [0x0153AD5C+1813852]
+	GetHandleVerifier [0x0175C616+1075574]
+	GetHandleVerifier [0x0175C367+1074887]
+	GetHandleVerifier [0x01767497+1120247]
+	GetHandleVerifier [0x0175CC16+1077110]
+	Ordinal0 [0x01533206+1782278]
+	Ordinal0 [0x0153C3BB+1819579]
+	Ordinal0 [0x0153C523+1819939]
+	Ordinal0 [0x01552B45+1911621]
+	BaseThreadInitThunk [0x74788494+36]
+	RtlAreBitsSet [0x778E41C8+136]
+	RtlAreBitsSet [0x778E4198+88]
+
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.W3CHandshakeResponse.lambda$new$0(W3CHandshakeResponse.java:57)
+	at org.openqa.selenium.remote.W3CHandshakeResponse.lambda$getResponseFunction$2(W3CHandshakeResponse.java:104)
+	at org.openqa.selenium.remote.ProtocolHandshake.lambda$createSession$0(ProtocolHandshake.java:122)
+	at java.util.stream.ReferencePipeline$3$1.accept(Unknown Source)
+	at java.util.Spliterators$ArraySpliterator.tryAdvance(Unknown Source)
+	at java.util.stream.ReferencePipeline.forEachWithCancel(Unknown Source)
+	at java.util.stream.AbstractPipeline.copyIntoWithCancel(Unknown Source)
+	at java.util.stream.AbstractPipeline.copyInto(Unknown Source)
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(Unknown Source)
+	at java.util.stream.FindOps$FindOp.evaluateSequential(Unknown Source)
+	at java.util.stream.AbstractPipeline.evaluate(Unknown Source)
+	at java.util.stream.ReferencePipeline.findFirst(Unknown Source)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:125)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:73)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:136)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:548)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:212)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:130)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:181)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:168)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:123)
+	at com.sohambko.qa.base.TestBase.initialization(TestBase.java:50)
+	at com.sohambko.qa.testcases.LoginPageTest.setUp(LoginPageTest.java:22)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:523)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:224)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:599)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:869)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1193)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:126)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+</pre></div></td>
+<td>0</td>
+<td>com.sohambko.qa.testcases.LoginPageTest@5a8e6209</td></tr>
+<tr>
+<td title='com.sohambko.qa.testcases.LoginPageTest.loginTest()'><b>loginTest</b><br>Test class: com.sohambko.qa.testcases.LoginPageTest</td>
+<td><div><pre>org.openqa.selenium.SessionNotCreatedException: session not created
+from disconnected: received Inspector.detached event
+  (Session info: chrome=84.0.4147.105)
+Build info: version: &apos;3.14.0&apos;, revision: &apos;aacccce0&apos;, time: &apos;2018-08-02T20:19:58.91Z&apos;
+System info: host: &apos;DEL1-LHP-N01966&apos;, ip: &apos;192.168.1.4&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_241&apos;
+Driver info: driver.version: ChromeDriver
+remote stacktrace: Backtrace:
+	Ordinal0 [0x016387E3+2852835]
+	Ordinal0 [0x01525BB1+1727409]
+	Ordinal0 [0x013FE4B9+517305]
+	Ordinal0 [0x013F6959+485721]
+	Ordinal0 [0x013F656C+484716]
+	Ordinal0 [0x013F5E98+482968]
+	Ordinal0 [0x013F52D1+479953]
+	Ordinal0 [0x013F5515+480533]
+	Ordinal0 [0x013F4F45+479045]
+	Ordinal0 [0x013FA02F+499759]
+	Ordinal0 [0x013F4F02+478978]
+	Ordinal0 [0x013F5B19+482073]
+	Ordinal0 [0x013F52D1+479953]
+	Ordinal0 [0x013F5515+480533]
+	Ordinal0 [0x013F4F45+479045]
+	Ordinal0 [0x013F9587+497031]
+	Ordinal0 [0x013F4F02+478978]
+	Ordinal0 [0x013F5B19+482073]
+	Ordinal0 [0x013F52D1+479953]
+	Ordinal0 [0x013F5515+480533]
+	Ordinal0 [0x013F4F45+479045]
+	Ordinal0 [0x013F16BC+464572]
+	Ordinal0 [0x013F4F02+478978]
+	Ordinal0 [0x013F4E57+478807]
+	Ordinal0 [0x013FF300+520960]
+	Ordinal0 [0x013AE489+189577]
+	Ordinal0 [0x013AD7FD+186365]
+	Ordinal0 [0x013AB70B+177931]
+	Ordinal0 [0x01392584+75140]
+	Ordinal0 [0x01393650+79440]
+	Ordinal0 [0x013935E9+79337]
+	Ordinal0 [0x0153AD5C+1813852]
+	GetHandleVerifier [0x0175C616+1075574]
+	GetHandleVerifier [0x0175C367+1074887]
+	GetHandleVerifier [0x01767497+1120247]
+	GetHandleVerifier [0x0175CC16+1077110]
+	Ordinal0 [0x01533206+1782278]
+	Ordinal0 [0x0153C3BB+1819579]
+	Ordinal0 [0x0153C523+1819939]
+	Ordinal0 [0x01552B45+1911621]
+	BaseThreadInitThunk [0x74788494+36]
+	RtlAreBitsSet [0x778E41C8+136]
+	RtlAreBitsSet [0x778E4198+88]
+
+	at org.openqa.selenium.remote.W3CHandshakeResponse.lambda$new$0(W3CHandshakeResponse.java:57)
+	at org.openqa.selenium.remote.W3CHandshakeResponse.lambda$getResponseFunction$2(W3CHandshakeResponse.java:104)
+	at org.openqa.selenium.remote.ProtocolHandshake.lambda$createSession$0(ProtocolHandshake.java:122)
+	at java.util.stream.ReferencePipeline$3$1.accept(Unknown Source)
+	at java.util.Spliterators$ArraySpliterator.tryAdvance(Unknown Source)
+	at java.util.stream.ReferencePipeline.forEachWithCancel(Unknown Source)
+	at java.util.stream.AbstractPipeline.copyIntoWithCancel(Unknown Source)
+	at java.util.stream.AbstractPipeline.copyInto(Unknown Source)
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(Unknown Source)
+	at java.util.stream.FindOps$FindOp.evaluateSequential(Unknown Source)
+	at java.util.stream.AbstractPipeline.evaluate(Unknown Source)
+	at java.util.stream.ReferencePipeline.findFirst(Unknown Source)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:125)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:73)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:136)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:548)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:212)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:130)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:181)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:168)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:123)
+	at com.sohambko.qa.base.TestBase.initialization(TestBase.java:50)
+	at com.sohambko.qa.testcases.LoginPageTest.setUp(LoginPageTest.java:22)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+... Removed 16 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace560996776", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace560996776'><pre>org.openqa.selenium.SessionNotCreatedException: session not created
+from disconnected: received Inspector.detached event
+  (Session info: chrome=84.0.4147.105)
+Build info: version: &apos;3.14.0&apos;, revision: &apos;aacccce0&apos;, time: &apos;2018-08-02T20:19:58.91Z&apos;
+System info: host: &apos;DEL1-LHP-N01966&apos;, ip: &apos;192.168.1.4&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_241&apos;
+Driver info: driver.version: ChromeDriver
+remote stacktrace: Backtrace:
+	Ordinal0 [0x016387E3+2852835]
+	Ordinal0 [0x01525BB1+1727409]
+	Ordinal0 [0x013FE4B9+517305]
+	Ordinal0 [0x013F6959+485721]
+	Ordinal0 [0x013F656C+484716]
+	Ordinal0 [0x013F5E98+482968]
+	Ordinal0 [0x013F52D1+479953]
+	Ordinal0 [0x013F5515+480533]
+	Ordinal0 [0x013F4F45+479045]
+	Ordinal0 [0x013FA02F+499759]
+	Ordinal0 [0x013F4F02+478978]
+	Ordinal0 [0x013F5B19+482073]
+	Ordinal0 [0x013F52D1+479953]
+	Ordinal0 [0x013F5515+480533]
+	Ordinal0 [0x013F4F45+479045]
+	Ordinal0 [0x013F9587+497031]
+	Ordinal0 [0x013F4F02+478978]
+	Ordinal0 [0x013F5B19+482073]
+	Ordinal0 [0x013F52D1+479953]
+	Ordinal0 [0x013F5515+480533]
+	Ordinal0 [0x013F4F45+479045]
+	Ordinal0 [0x013F16BC+464572]
+	Ordinal0 [0x013F4F02+478978]
+	Ordinal0 [0x013F4E57+478807]
+	Ordinal0 [0x013FF300+520960]
+	Ordinal0 [0x013AE489+189577]
+	Ordinal0 [0x013AD7FD+186365]
+	Ordinal0 [0x013AB70B+177931]
+	Ordinal0 [0x01392584+75140]
+	Ordinal0 [0x01393650+79440]
+	Ordinal0 [0x013935E9+79337]
+	Ordinal0 [0x0153AD5C+1813852]
+	GetHandleVerifier [0x0175C616+1075574]
+	GetHandleVerifier [0x0175C367+1074887]
+	GetHandleVerifier [0x01767497+1120247]
+	GetHandleVerifier [0x0175CC16+1077110]
+	Ordinal0 [0x01533206+1782278]
+	Ordinal0 [0x0153C3BB+1819579]
+	Ordinal0 [0x0153C523+1819939]
+	Ordinal0 [0x01552B45+1911621]
+	BaseThreadInitThunk [0x74788494+36]
+	RtlAreBitsSet [0x778E41C8+136]
+	RtlAreBitsSet [0x778E4198+88]
+
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.W3CHandshakeResponse.lambda$new$0(W3CHandshakeResponse.java:57)
+	at org.openqa.selenium.remote.W3CHandshakeResponse.lambda$getResponseFunction$2(W3CHandshakeResponse.java:104)
+	at org.openqa.selenium.remote.ProtocolHandshake.lambda$createSession$0(ProtocolHandshake.java:122)
+	at java.util.stream.ReferencePipeline$3$1.accept(Unknown Source)
+	at java.util.Spliterators$ArraySpliterator.tryAdvance(Unknown Source)
+	at java.util.stream.ReferencePipeline.forEachWithCancel(Unknown Source)
+	at java.util.stream.AbstractPipeline.copyIntoWithCancel(Unknown Source)
+	at java.util.stream.AbstractPipeline.copyInto(Unknown Source)
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(Unknown Source)
+	at java.util.stream.FindOps$FindOp.evaluateSequential(Unknown Source)
+	at java.util.stream.AbstractPipeline.evaluate(Unknown Source)
+	at java.util.stream.ReferencePipeline.findFirst(Unknown Source)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:125)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:73)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:136)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:548)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:212)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:130)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:181)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:168)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:123)
+	at com.sohambko.qa.base.TestBase.initialization(TestBase.java:50)
+	at com.sohambko.qa.testcases.LoginPageTest.setUp(LoginPageTest.java:22)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:523)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:224)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:599)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:869)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1193)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:126)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+</pre></div></td>
+<td>0</td>
+<td>com.sohambko.qa.testcases.LoginPageTest@5a8e6209</td></tr>
+</table><p>
+</body>
+</html>

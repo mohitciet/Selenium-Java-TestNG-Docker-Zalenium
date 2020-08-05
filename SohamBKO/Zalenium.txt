@@ -1,0 +1,44 @@
+Docker commands
+---------------------
+1) Check docker version & Status:
+docker version
+
+2) Check available docker imges
+docker images
+
+3) Check available containers
+docker ps
+
+4) Removes all the stopped containers
+docker system prune -f 
+
+5) Delete available docker imges
+docker rmi image ID
+
+6 docker start
+docker start container id
+ 
+7)docker stop
+docker stop container id
+
+###################################################################  
+Zalenium Setup
+------------------------------
+1) If Zelenium images not downloaded earliar then start download using below commands
+ 
+docker pull elgalu/selenium  
+docker pull dosel/zalenium
+ 
+2) Starting Zalenium
+-------------
+docker run --rm -ti --name zalenium -p 4444:4444 -v /var/run/docker.sock:/var/run/docker.sock -v /c/Users/admin/temp/videos:/Users/admin/temp/videos --privileged dosel/zalenium start 
+
+3) Stopping Zalenium
+----------------
+docker stop zalenium
+
+URL's:
+Grid Console: http://localhost:4444/grid/console
+Live view: http://localhost:4444/grid/admin/live 
+Live view(Refreshing Page): http://localhost:4444/grid/admin/live... 
+Dashboard: http://localhost:4444/dashboard 

@@ -1,0 +1,72 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="Free CRM Test automtion regression suite" 
+	thread-count="2" parallel="tests">
+
+	<!-- <listeners> <listener class-name="com.qa.hubspot.listeners.ExtentReportListener" 
+		/> <listener class-name="com.qa.hubspot.listeners.pdfListener" /> <listener 
+		class-name="com.qa.hubspot.listeners.TestAllureListener"/> <listener class-name="com.qa.hubspot.listeners.TesultsListener" 
+		/> <listener class-name="com.qa.hubspot.listeners.ScreenshotListener" /> 
+		</listeners> -->
+		
+		<listeners>
+<!-- 		<listener class-name="com.sohambko.qa.ExtentReportListener.TesultsListener" /> -->
+		<listener class-name="com.sohambko.qa.ExtentReportListener.ExtentReportListener" />
+
+
+		<!-- <listener class-name="com.qa.hubspot.testlisteners.pdfListener" /> -->
+	</listeners>
+	
+<!-- 	<test name="Docker Tests"> -->
+<!-- 		<parameter name="browser" value="chrome" /> -->
+<!-- 		<classes> -->
+<!-- 			<class name="com.sohambko.qa.testcases.StartTest" /> -->
+<!-- 		</classes> -->
+<!-- 	</test>  -->
+
+
+	<test name="Login Page Tests">
+		<parameter name="browser" value="chrome" />
+		<classes>
+			<class name="com.sohambko.qa.testcases.LoginPageTest" />
+		</classes>
+	</test> 
+
+	<test name="Home Page Tests">
+		<parameter name="browser" value="chrome" />
+		<classes>
+			<class name="com.sohambko.qa.testcases.HomePageTest" />
+		</classes>
+	</test>
+	
+	<test name="Contacts Page Tests">
+		<parameter name="browser" value="chrome" />
+		<classes>
+			<class name="com.sohambko.qa.testcases.ContactsPageTest" />
+		</classes>
+	</test> 
+	
+	
+	
+	<test name="Contacts Page Tests 1">
+		<parameter name="browser" value="chrome" />
+		<classes>
+			<class name="com.sohambko.qa.testcases.ContactsPageTest" />
+		</classes>
+	</test> 
+	
+	
+	
+	<test name="Contacts Page Tests 2">
+		<parameter name="browser" value="chrome" />
+		<classes>
+			<class name="com.sohambko.qa.testcases.ContactsPageTest" />
+		</classes>
+	</test> 
+	
+	
+<!-- <test name="contacts page test"> <classes> <class name="com.qa.hubspot.tests.ContactsPageTest" 
+		/> </classes> </test> -->
+
+
+</suite>

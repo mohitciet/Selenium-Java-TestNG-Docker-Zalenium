@@ -1,0 +1,17 @@
+Selenium Grid Integration with Docker (Notes)
+-------------------------------------------------------------------------
+1) Create a file docker-compose.yaml with Required config
+ Ref: https://github.com/SeleniumHQ/docker-...
+
+2) Run docker-compose.yaml
+ docker-compose up
+
+3) To check hub & nodes running state:   
+  http://localhost:4444/grid/console
+
+4) To increase the number of nodes
+ docker-compose scale chrome=5
+ docker-compose scale firefox=5
+
+5) To stop the grid and cleanup the created containers
+ docker-compose down

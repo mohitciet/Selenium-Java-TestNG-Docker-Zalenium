@@ -1,0 +1,15 @@
+com\sohambko\qa\pages\LoginPage.class
+com\sohambko\qa\pages\ContactsPage.class
+com\sohambko\qa\util\OptionsManager.class
+com\sohambko\qa\pages\DealsPage.class
+com\sohambko\qa\base\BaseTest.class
+com\sohambko\qa\pages\HomePage.class
+com\sohambko\qa\pages\SignUpPage.class
+com\sohambko\qa\util\ElementUtil$1.class
+com\sohambko\qa\pages\TaskPage.class
+com\sohambko\qa\util\Constants.class
+com\sohambko\qa\util\ElementUtil.class
+com\sohambko\qa\ExtentReportListener\TesultsListener.class
+com\sohambko\qa\base\TestBase.class
+com\sohambko\qa\ExtentReportListener\ExtentReportListener.class
+com\sohambko\qa\util\ExcelUtil.class
